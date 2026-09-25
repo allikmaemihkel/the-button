@@ -1,0 +1,7 @@
+<!doctype html><html lang="et"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Veebitausta kontroll</title>
+<style>body{background:#101b35;color:white;font:24px system-ui;padding:32px}input,button,a{display:block;margin:24px 0;padding:20px;font:24px system-ui}input{width:70%}a{color:#ff7093}section{height:100vh}</style>
+<h1>Veebitausta kontroll</h1><p id="tick">Animatsioon töötab</p>
+<input id="note" aria-label="Kontrolltekst" placeholder="Kirjuta siia">
+<button id="counter" onclick="this.textContent='Vajutusi: '+(++window.count)">Vajutusi: 0</button>
+<a href="/next">Ava järgmine leht</a><section></section><h2>Kerimine töötab</h2>
+<script>window.count=0;setInterval(()=>document.getElementById('tick').textContent='Animatsioon: '+new Date().toLocaleTimeString(),1000);if(location.pathname==='/next'){document.querySelector('h1').textContent='Järgmine leht';}</script></html>
